@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Munch</string>
+
+     <string-array name="header_titles">
+         <item>Action Movies</item>
+         <item>Romantic Movies</item>
+         <item>Horror Movies</item>
+     </string-array>
+    <string-array name="h1_items">
+        <item>The Dark Knight</item>
+        <item>Minority Report</item>
+        <item>Taken</item>
+    </string-array>
+
+    <string-array name="h2_items">
+        <item>love</item>
+        <item>Love 2</item>
+        <item>Love 3</item>
+    </string-array>
+
+    <string-array name="h3_items">
+        <item>scary</item>
+        <item>bad scary</item>
+        <item>scary scary</item>
+    </string-array>
+
+</resources>
