@@ -43,7 +43,9 @@ public class DerpData {
             android.R.drawable.ic_menu_delete};
 
 
+// This is the import script. It populates the list array
 
+    //** TODO:  We need to create a simple script that checks string values from an array and imports specific values.
     public static List<ListItem> getListData() {
         List<ListItem> data = new ArrayList<>();
 
