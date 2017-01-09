@@ -1,6 +1,7 @@
 package trashey.recyclerviewtest.model;
 
 import android.content.ClipData;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,6 +10,18 @@ import trashey.recyclerviewtest.R;
 
 
 public class DerpData {
+
+    //List of names of the brands
+    private static final String[] brand_names = {"Chipotle",
+            "McDonalds",
+            "Wendy's",
+            "Subway"};
+
+    //List of the images
+    private static final int[] logos = {R.drawable.chipotle,
+            R.drawable.mc_donalds,
+            R.drawable.wendys,
+            R.drawable.subway};
 
     private static final String[] titles = {"Nothingness cannot be defined",
             "Time is like a river made up of the events which happen, and a violent stream; " +
@@ -43,20 +56,22 @@ public class DerpData {
             android.R.drawable.ic_menu_delete};
 
 
-
     public static List<ListItem> getListData() {
         List<ListItem> data = new ArrayList<>();
 
         //Repeat process 4 times, so that we have enough data to demonstrate a scrollable
         //RecyclerView
-        for (int x = 0; x < 1; x++) {
+        for (int x = 0; x < 2; x++) {
             //create ListItem with dummy data, then add them to our List
-            for (int i = 0; i < titles.length && i < icons.length; i++) {
+            for (int i = 0; i < brand_names.length && i < icons.length; i++) {
+
+
                 ListItem item = new ListItem();
                 item.setImageResid(icons[i]);
-                item.setTitle(titles[i]);
+                item.setTitle(brand_names[i]);
+                //Here we set the image. We use int to set it not an ImageView
+                item.setLogo(logos[i]);
                 data.add(item);
-
             }
         }
         return data;

@@ -24,6 +24,8 @@ public class DerpAdapter extends RecyclerView.Adapter<DerpAdapter.DerpHolder>  {
 
     private ItemClickCallback itemClickCallback;
 
+
+
     public interface ItemClickCallback {
         void onItemClick(int p);
         void onSecondaryIconClick(int p);
@@ -50,6 +52,7 @@ public class DerpAdapter extends RecyclerView.Adapter<DerpAdapter.DerpHolder>  {
         ListItem item = listData.get(position);
         holder.title.setText(item.getTitle());
         holder.subTitle.setText(item.getSubTitle());
+        holder.logo.setImageResource(item.getLogo());
        /* if(item.isFavourite()){
             holder.secondaryicon.setImageResource(R.drawable.ic_star_black_24dp);
         }else {
@@ -76,6 +79,7 @@ public class DerpAdapter extends RecyclerView.Adapter<DerpAdapter.DerpHolder>  {
        // private ImageView secondaryicon;
         private View container;
         private Button load;
+        private ImageView logo;
 
         public DerpHolder(View itemView) {
             super(itemView);
@@ -83,6 +87,7 @@ public class DerpAdapter extends RecyclerView.Adapter<DerpAdapter.DerpHolder>  {
             title = (TextView) itemView.findViewById(R.id.lbl_item_text);
             subTitle = (TextView) itemView.findViewById(R.id.lbl_item_sub_title);
             thumbnail = (ImageView) itemView.findViewById(R.id.im_item_icon);
+            logo = (ImageView) itemView.findViewById(R.id.im_item_icon);
            // secondaryicon = (ImageView) itemView.findViewById(R.id.im_item_icon_secondary);
             // secondaryicon.setOnClickListener(this);
             load = (Button)itemView.findViewById(R.id.btn_card_load);
