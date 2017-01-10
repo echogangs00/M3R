@@ -49,7 +49,7 @@ public class DerpData {
 
         //Repeat process 4 times, so that we have enough data to demonstrate a scrollable
         //RecyclerView
-        for (int x = 0; x < 4; x++) {
+        for (int x = 0; x < 1; x++) {
             //create ListItem with dummy data, then add them to our List
             for (int i = 0; i < titles.length && i < icons.length; i++) {
                 ListItem item = new ListItem();
